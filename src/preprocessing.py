@@ -119,7 +119,7 @@ def main():
         #tweet = replace_emojis(tweet)                          # Convert emoji into its textual description
         tweet = remove_emojis(tweet)                            # Remove emojis
         tweet = tweet.lower()                                   # Convert to lowercase
-        tweet = remove_query_hashtags(tweet)                    # Remove query hashtags to exclude obvious clues
+        #tweet = remove_query_hashtags(tweet)                    # Remove query hashtags to exclude obvious clues
         tweet = transform_hashtag(tweet)                        # Transform remaining hashtags
         #tweet = remove_hashtag(tweet)                          # Remove hashtags
         tweet = re.sub(r'(?<!\S)#(\S+)', r'\1', tweet)          # Remove any other hashtag charachters
@@ -139,7 +139,7 @@ def main():
     # ----- SAVE IN NEW COLUMN ----- #
     df.insert(3, "text_cleaned", cleaned)
     df.to_csv('{}_cleaned.csv'.format(FILENAME), index=False, header=True)
-    print('********* TEXT CLEANING COMPLETED *********')
+    print('********* COMPLETED *********')
 
 
 if __name__ == "__main__":
