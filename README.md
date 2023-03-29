@@ -20,8 +20,9 @@ The model was fine-tuned on four targets:
 
 The complete dataset is made available for the research community. Due to privacy restrictions of the Twitter API, only the text IDs, the target as keywords as well as in the form of a German question, and stance labels (against, favor) are provided. The complete data can be retrieved via the Twitter API with appropriate access. Note: For underrepresented classes a [back translation](https://github.com/joh-ga/german-tweetstance-russiaukrainewar/blob/main/src/backtranslation.py) was performed that is not included in the dataset files. <br>
 
-Class Distribution of Auto-[Labeled Dataset](./data/data_labeled) <br>
-<img src="./img/dataset.png" height=150>
+Class Distribution of Auto-[Labeled Dataset](./data/data_labeled)
+| :---: |
+|<img src="./img/dataset.png" height=150>|
 
 **Preprocessing** <br>
 The model receives as input the target formulated as a question along with the corresponding tweet: target question [SEP] tweet. 
@@ -33,18 +34,22 @@ Information on the text preprocessing can be found [here](https://github.com/joh
 
 ## Exploratory Analysis 2022 Twitter Data
 ### Stance Prediction Results
+|<img src="./img/predresults_US.png">| <img src="./img/predresults_AD.png">|
+| :---: | :---: |
+|<img src="./img/predresults_NOC.png">| <img src="./img/predresults_SLI.png">|
+
 ### Tweet Volume Timelines
-Ukraine Support | Arms Delivery 
-| :---: | :---: 
-<img src="./img/timevolume_US.png">| <img src="./img/timevolume_AD.png">
-Nuclear Energy | Speed Limit
-<img src="./img/timevolume_NOC.png" >|<img src="./img/timevolume_SLI.png" >
+Ukraine Support | Arms Delivery |
+| :---: | :---: |
+|<img src="./img/timevolume_US.png">| <img src="./img/timevolume_AD.png">|
+|Nuclear Energy & NPPs | Speed Limit Implementation|
+|<img src="./img/timevolume_NOC.png" >|<img src="./img/timevolume_SLI.png" >|
 
 ### Takeaways
 The classified data provide clues to potential arguments and reasons of a stance-group identified with word frequencies and keyword-in-context consideration.
 
 **Target Ukraine Support** <br>
-German-speaking Twitter users have been debating Germany's political course in the conflict. Users who are in favor or against towards the general support of Ukraine in the conflict often use the same arguments as of the following socio-political related topics that have been discussed and found in 2022 Twitter data. Throughout 2022, it can be seen in the tweet volume timeline US that the number of users who have a favorable stance towards supporting Ukraine in the conflict outweighs the number of users with an opposing stance.
+German-speaking Twitter users have been debating Germany's political course in the conflict. Users who are in favor or against towards the general support of Ukraine in the conflict often use the same arguments as of the following socio-political related topics that have been discussed and found in 2022 Twitter data. Throughout 2022, it can be seen that the number of users who have a favorable stance towards supporting Ukraine in the conflict outweighs the number of users with an opposing stance (tweet volume timeline).
 
 Favor-Arms Delivery | Against-Arms Delivery |
 | :--- | :--- |
@@ -57,7 +62,7 @@ Favor-Nuclear Energy | Against-Nuclear Energy |
 | :--- | :--- |
 | Germany needs nuclear energy for a secure future. |There is no reason to extend the operation time of NPPs, as the energy supply in Germany is secure.|
 |Renewable energies are not (yet) safe enough to exclude nuclear energy as an alternative energy source.| NPPs bring with them further problems, such as with regard to the disposal of nuclear waste. |
-Nuclear power is not an environment-friendly technology. | LNG terminals are also not sustainable.|
+| LNG terminals are also not sustainable.| Nuclear power is not an environment-friendly technology. |
 ||Nuclear energy is a source of danger. |
 
 Favor-Speed Limit | Against-Speed Limit |
